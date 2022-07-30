@@ -1,4 +1,5 @@
 // const API_KEY = 'your_api_key'
+
 // const DOTNUM = '1595946'
 let dotNum = document.getElementById('dotnum')
 let submit = document.getElementById('submit')
@@ -13,7 +14,7 @@ let form = document.getElementById('form')
 let cont = {}
 
 function getTruckInfo(dot, el) {
-  const URL = `https://mobile.fmcsa.dot.gov/qc/services/carriers/${dot}?webKey=${process.env.API_KEY}`
+  const URL = `https://mobile.fmcsa.dot.gov/qc/services/carriers/${dot}?webKey=${API_KEY}`
   fetch(URL)
     .then(response => response.json())
     .then(data => {
